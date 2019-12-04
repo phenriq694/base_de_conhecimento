@@ -3,6 +3,7 @@
 ```
   "devDependencies": {
     "babel-eslint": "^10.0.3",
+    "babel-plugin-root-import": "^6.4.1",
     "customize-cra": "^0.9.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
