@@ -68,7 +68,7 @@ Adicionar o 'loading' no component que fará uso dele. No exemplo abaixo, foi ut
 <button type="submit">{loading ? 'Carregando...' : 'Acessar'}</button>
 ```
 
-O código final deve ficar assim:
+O código final do 'signin/index.js' deve ficar assim:
 ```
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -116,6 +116,61 @@ export default function SignIn() {
   );
 }
 ```
+Após isso, nas configurações do saga da autenticação, é necessário colocar um 'try/catch' por volta do código para captura quando ocorrer uma falha. 
+Para isso vamos importar a actiona responsável pelo '@auth/SIGN_FAILURE'
+```
+import { signFailure } from './actions' 
+```
+E depois o código que queremos testar dentro do 'try':
+```
+try {
+    const { email, password } = payload;
+
+    const response = yield call(api.post, 'sessions', {
+      email,
+      password,
+    });
+
+    const { token, user } = response.data;
+
+    yield put(signInSuccess(token, user));
+
+    history.push('/dashboard');
+  } catch (err) {
+    yield put(signFailure());
+  }
+```
+O código final do 'aut/saga.js' deve ficar assim:
+```
+import { takeLatest, call, put, all } from 'redux-saga/effects';
+
+import history from '~/services/history';
+import api from '~/services/api';
+
+import { signInSuccess, signFailure } from './actions';
+
+export function* singIn({ payload }) {
+  try {
+    const { email, password } = payload;
+
+    const response = yield call(api.post, 'sessions', {
+      email,
+      password,
+    });
+
+    const { token, user } = response.data;
+
+    yield put(signInSuccess(token, user));
+
+    history.push('/dashboard');
+  } catch (err) {
+    yield put(signFailure());
+  }
+}
+
+export default all([takeLatest('@auth/SIGN_IN_REQUEST', singIn)]);
+```
+
 
 
 
