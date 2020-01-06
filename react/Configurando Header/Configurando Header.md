@@ -1,4 +1,4 @@
-#Configurando Header
+# Configurando Header
 ## Como desenvolver um Header básico para ser utilizado e diversas páginas. 
 Como o Header não é especifico de uma página, podemos criar uma pasta chamada 'componentes' dentro da pasta src para incluir esse e outros componentes. 
 1. Criar um arquivo 'index.js' dentro da pasta do componente Header:
@@ -122,3 +122,6 @@ export default function Dashboard() {
   );
 }
 ```
+
+## Fontes: 
+### Rockseat GoStack - Módulo GoBarber Web - Configurando Header. 
