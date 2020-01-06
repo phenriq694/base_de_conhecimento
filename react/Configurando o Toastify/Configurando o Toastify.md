@@ -1,4 +1,4 @@
-#Configurando o Toastify
+# Configurando o Toastify
 ## Como configurar o módulo toastify em uma aplicação react para exibir mensagem customizadas aos usuários. 
 Fazer a instalção do módulo:
 #### Utilizando yarn
