@@ -18,3 +18,13 @@
     "react-app-rewired": "^2.1.5"
   }
   ```
+
+Após isso, executar o comando 'yarn' para instalação das dependências:
+```
+yarn
+```
+
+Não esquecer de instalar a extensão do 'EsLint' para o VS Code.
+
+## Fontes: 
+### Rockseat GoStack - Módulo Iniciando back-end do GoBarber - ESLint, Prettier & EditorConfig. 
