@@ -1,0 +1,46 @@
+<table>
+  <thead> <!-- Inicializando um cabeçalho na tabela -->
+    <tr> <!-- Linha da tabela (table row) -->
+      <th>Produto</th> <!-- Célula cabeçalho da tabela (table header) -->
+      <th>Quantidade</th>
+      <th>Preço</th>
+    </tr>
+  <thead>
+  <tbody> <!-- Inicializando o corpo da tabela -->
+    <tr> <!-- Linha da tabela (table row) -->
+      <td>Notebook</td> <!-- Célula de dados da tabela (table data) -->
+      <td>3</td>
+      <td>R$ 2.500,00</td>
+    </tr>
+  <tbody>
+  <tfoot> <!-- Inicializando o rodapé da tabela -->
+    <tr> <!-- Linha da tabela (table row) -->
+      <td colspan="2">Total</td>
+      <td>R$ 7.500,00 </td>
+    </tr>
+  <tfoot>
+</table>
+
+<style>
+  table {
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  thead tr {
+    border-bottom: solid 2px black;
+  }
+
+  tbody tr:hover {
+    background-color: #dedede;
+  }
+
+  tfoot {
+    background-color: #444;
+    color: #fff;
+    font-weight: bold;
+  }
+</style>
