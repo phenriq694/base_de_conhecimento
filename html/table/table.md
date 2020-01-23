@@ -102,3 +102,6 @@ Utiliza para ocupar mais de uma linha. É passado como um atribudo na tag que qu
   }
 </style>
 ```
+
+# Fonte:
+## Curso Web Moderno com JavaScript - Seção 11 - HTML - Tabela
