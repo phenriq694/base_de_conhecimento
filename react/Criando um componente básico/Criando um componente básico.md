@@ -22,3 +22,6 @@ render(<App />, document.getElementById('app'));
 ```
 
 3. Agora é só executar a aplicação que o componente será exibido com suas propriedades configuradas individualmente dos outros componentes. 
+
+## Fontes: 
+- Rockseat GoStack - Módulo Introdução ao React - Criando um componente raiz. 
