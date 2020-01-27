@@ -5,7 +5,7 @@
 Utilizado para criação de um elemento no banco. Utilizado principalmente como método 'POST'.
 Como parâmetro passamos os dados que serão inseridos no banco. 
 Pode ser passado usando um objeto, desde que ele tenha os atributos com os nome iguais as colunas do banco, como no exemplo abaixo:
-```
+```javascript
 import User from '../models/User'
 
 class UserController {
@@ -20,7 +20,7 @@ export default new UserController();
 ```
 
 Ou passando o valor de cada atributo: 
-```
+```javascript
 import User from '../models/User'
 
 class UserController {
@@ -40,7 +40,7 @@ export default new UserController();
 ### findone:
 Utilizado para encontra um único elemento na base de dados.
 Como parâmetro passamos a condição que o elemento precisa ter.
-```
+```javascript
 import User from '../models/User'
 
 class UserController {
@@ -60,4 +60,4 @@ class UserController {
 export default new UserController();
 ```
 ## Fontes: 
-### Rockseat GoStack - Módulo Iniciando back-end do GoBarber - Cadastro de usuários. 
+- Rockseat GoStack - Módulo Iniciando back-end do GoBarber - Cadastro de usuários. 
