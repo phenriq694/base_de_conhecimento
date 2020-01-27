@@ -7,14 +7,14 @@ pip install requests
 ```
 
 ### get method:
-```
+```python
 import requests
 
 res = requests.get('https://automatheboringstuff.com/files/rj.txt')
 ```
  
 ### Request Status:
-```
+```python
 res.status_code # Retorna o código do status da requisição.
 
 res.raise_for_status() # Retorna uma mensagem de erro caso a requisção falhe ou não retorna nada caso ela tenha sucesso. 
