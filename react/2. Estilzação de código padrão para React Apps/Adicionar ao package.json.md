@@ -26,5 +26,5 @@ yarn
 
 Não esquecer de instalar a extensão do 'EsLint' para o VS Code.
 
-## Fontes: 
-### Rockseat GoStack - Módulo Iniciando back-end do GoBarber - ESLint, Prettier & EditorConfig. 
+## Fontes:
+- Rockseat GoStack - Módulo Primeiro projeto com ReactJS - ESLint, Prettier & EditorConfig.

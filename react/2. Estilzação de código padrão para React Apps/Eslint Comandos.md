@@ -5,5 +5,5 @@
 yarn eslint --fix src --ext .js
 ```
 
-## Fontes: 
-### Rockseat GoStack - Módulo Iniciando back-end do GoBarber - ESLint, Prettier & EditorConfigt. 
+## Fontes:
+- Rockseat GoStack - Módulo Iniciando back-end do GoBarber - ESLint, Prettier & EditorConfigt.
