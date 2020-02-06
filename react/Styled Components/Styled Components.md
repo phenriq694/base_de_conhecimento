@@ -37,7 +37,7 @@ export default function Home() {
 ```
 
 ## Acesando as propriedades de um styled component:
-Caso for passado alguma propriedade no style component, como por exemplo:
+ Caso for passado alguma propriedade no style component, como por exemplo:
 ```javascript
 <Title error>Home</Title>
 ``` 
