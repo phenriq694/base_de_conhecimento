@@ -1,4 +1,12 @@
-# React 
+<h1 align="center">
+  <img 
+    alt="Introdução ao React" src="https://user-images.githubusercontent.com/54601930/73386759-30e0c100-42ae-11ea-8587-fc4a40e63e6a.png" 
+    width="200px"
+  />
+</h1>
+<h2 align="center">
+  React
+</h2>
 
 ### O que é React?
 - Biblioteca para contrusção de interfaces;
