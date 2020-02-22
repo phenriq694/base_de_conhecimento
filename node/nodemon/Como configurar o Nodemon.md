@@ -8,7 +8,7 @@ yarn add nodemon -D
 2. Configurar um atalho no arquivo 'package.json' para executar o comando:
 ```
 "scripts": {
-  "dev": "nodemon index.js"
+  "dev": "nodemon src/server.js"
 },
 ```
 Exemplo de como fica o no arquivo:
