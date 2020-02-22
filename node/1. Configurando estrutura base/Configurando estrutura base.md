@@ -67,6 +67,7 @@ node src/server.js
 ```
 
 8. Caso nenhum erro ocorrer, acessar no navegador a porta do servidor. Se estiver tudo ok, a mensagem abaixo em JSON será exibida:
+
 ![Captura de tela de 2020-02-22 15-44-03](https://user-images.githubusercontent.com/54601930/75097505-3c13cd80-558a-11ea-84f5-8a1a9f699434.png)
 
 ## Fontes: 
