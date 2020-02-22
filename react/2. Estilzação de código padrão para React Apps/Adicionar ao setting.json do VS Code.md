@@ -5,7 +5,7 @@
   //Eslint configs
   "eslint.autoFixOnSave": true,
   "eslint.validate": [
-      { 
+      {
           "language": "javascript",
           "autoFix": true,
       },
@@ -16,5 +16,5 @@
   ],
 ```
 
-## Fontes: 
-### Rockseat GoStack - Módulo Iniciando back-end do GoBarber - ESLint, Prettier & EditorConfig. 
+## Fontes:
+- Rockseat GoStack - Módulo Primeiro projeto com ReactJS - ESLint, Prettier & EditorConfig.
