@@ -95,7 +95,7 @@ export default new SessionController();
 ```
 7. Criar uma rota post para a criação da session no arquivo 'routes.js':
 ```javascript
-import SessionController form './app/controllers/SessionController';
+import SessionController from './app/controllers/SessionController';
 
 routes.post('/sessions', SessionController.store);
 ```
