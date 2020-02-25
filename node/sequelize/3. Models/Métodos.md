@@ -38,7 +38,7 @@ export default new UserController();
 ```
 
 ### update:
-Utilizado para a atualização de um elemento no banco. Utilizado principalmente com o método 'PUT'.
+Utilizado para a atualização de um elemento no banco. Para isso, é necessário localizar o elemento que será atualizado. Utilizado principalmente com o método 'PUT'.
 Como parâmetro passamos os dados que serão atualizados no banco. 
 Pode ser passado usando um objeto, desde que ele tenha os atributos com os nome iguais as colunas do banco. Exemplo:
 ```javascript
@@ -46,7 +46,9 @@ import User from '../models/User';
 
 class UserController {
   async update(req, res) {
-    const { id, name, email } = await User.update(req.body);
+    const user = await User.findByPk(req.userId);
+
+    const { id, name, email } = await user.update(req.body);
 
     return res.json({
       id, 
