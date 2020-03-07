@@ -8,7 +8,7 @@ yarn sequelize migration:create --name=nome-da-migration
 2. Um arquivo será gerado dentro de 'src/database/migrations/', definido na configuração do sequilize.
 
 3. Exemplo de uma migration para criação de uma tabela:
-```
+```javascript
 module.exports = {
   up: (queryInterface, Sequelize) => { // Será executado quando a migration for aplicada
     return queryInterface.createTable('users', {
@@ -36,7 +36,7 @@ module.exports = {
         allowNull: false,
       }
     })
-  }
+  },
 
 
   down: queryInterface => { // Será executado quando a migration for desfeita.
@@ -61,4 +61,4 @@ yarn sequelize db:migrate:undo:all
 ```
 
 ## Fontes: 
-### Rockseat GoStack - Módulo Iniciando back-end do GoBarber - Migration de usuário. 
+- Rockseat GoStack - Módulo Iniciando back-end do GoBarber - Migration de usuário. 
