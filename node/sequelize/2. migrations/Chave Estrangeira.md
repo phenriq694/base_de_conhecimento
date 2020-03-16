@@ -11,14 +11,21 @@ module.exports = {
       {
         type: Sequelize.INTEGER, 
         references: { model: 'files', key: 'id' },
-        onUpdate: '',
-        onDelete: '',
+        onUpdate: 'CASCADE', /* Qualquer atualização no elemento vai atualizar dentro dessa coluna também */
+        onDelete: 'SET NULL', /* Quando ele for deletado, mudar o valor dele para null */
       },
     )
   },
 
-  down: (queryInterface, Sequelize) => {
-
-  }
+  down: queryInterface => {
+    return queryInterface.removeColumn('users', 'avatar_id');
+  },
 };
 ``` 
+2. Rodar o comando do sequelize para executar a migration:
+```
+yarn sequelize db:migrate
+```
+
+## Fontes: 
+- Rockseat GoStack - Módulo Continuando API do GoBarber - Avatar do usuário. 

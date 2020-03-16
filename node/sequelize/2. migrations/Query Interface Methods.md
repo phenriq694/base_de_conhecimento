@@ -22,3 +22,6 @@ module.exports = {
   }
 };
 ``` 
+
+## Fontes: 
+- Rockseat GoStack - Módulo Continuando API do GoBarber - Avatar do usuário. 
