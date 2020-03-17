@@ -61,6 +61,28 @@ class UserController {
 export default new UserController();
 ```
 
+### destroy:
+Utilizado para excluir uma elemento de uma tabela. Para isso, é necessário localizar o elemento que será deltado. Utilizado principalmente com o método 'DELETE'. Pode ser utilizado direto no elemento localizado. 
+```javascript
+import Deliveryman from '../models/Deliveryman';
+
+class Deliverymane {
+  async delete(req, res) {
+    const deliveryman = await Deliveryman.findByPk(req.params.deliveryman_id);
+
+    if (!deliveryman) {
+      return res.status(400).json({ error: 'Deliveryman cannot be found' });
+    }
+
+    await deliveryman.destroy();
+
+    return res.json(deliveryman);
+  }
+}
+
+export default new DeliverymanController();
+```
+
 ### findone:
 Utilizado para encontra um único elemento na base de dados.
 Como parâmetro passamos a condição que o elemento precisa ter.
