@@ -47,4 +47,4 @@ routes.post('/users', UserController.update);
 ```
 
 ## Fontes: 
-- Rockseat GoStack - Módulo Iniciando back-end do GoBarber - Middleware de autenticação. 
+- Rocketseat GoStack - Módulo Iniciando back-end do GoBarber - Middleware de autenticação. 

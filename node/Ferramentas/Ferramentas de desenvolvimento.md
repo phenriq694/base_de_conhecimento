@@ -7,3 +7,11 @@ https://electronjs.org/apps/postbird
 
 ### MongoDB Compass - para o MongoDB:
 https://www.mongodb.com/download-center/compass
+
+## Serviços de envio de e-mail:
+- Amazon SES;
+- Mailgun;
+- Sparkpost;
+- Mandril (Mailchimp);
+- Mailtrap (Ambiente de desenvolvimento).
+https://mailtrap.io
