@@ -142,6 +142,71 @@ class UserController {
 
 export default new UserController();
 ```
+## Conditions
+### Condições para filtrar os resultados das consultas ao banco. 
+
+#### where: 
+```javascript
+import User from '../models/User';
+
+class ProviderController {
+  async index(req, res) {
+    const providers = await User.fundAll({
+      where: { provider: true }, // Retornará apenas os 'user' quer for 'provider'.
+    });
+
+    return res.json(providers)
+  }
+}
+
+export default new ProviderController();
+```
+
+#### attributes:
+Seleciona quais atributos vai retornar com o elemento. 
+```javascript
+import User from '../models/User';
+
+class ProviderController {
+  async index(req, res) {
+    const providers = await User.fundAll({
+      where: { provider: true }, 
+      attributes: ['id', 'name', 'email', 'avatar_id'],
+    });
+
+    return res.json(providers)
+  }
+}
+
+export default new ProviderController();
+```
+
+#### include:
+Inclui informações dos atributos de outras tabelas através de um relacionamento usando a chave estrangeira. 
+É necessário importar a model que está no relacionamento. 
+```javascript
+import User from '../models/User';
+
+class ProviderController {
+  async index(req, res) {
+    const providers = await User.fundAll({
+      where: { provider: true }, 
+      include: [
+        {
+          model: File,
+          as: 'avatar',
+          attributes: ['name', 'path'],
+        },
+      ],
+    });
+
+    return res.json(providers)
+  }
+}
+
+export default new ProviderController();
+```
 
 ## Fontes: 
-- Rockseat GoStack - Módulo Iniciando back-end do GoBarber - Cadastro de usuários. 
+- Rocketseat GoStack - Módulo Iniciando back-end do GoBarber - Cadastro de usuários. 
+- Rocketseat GoStack - Módulo Continuando API do GoBarber - Listagem de prestadores de serviço.
