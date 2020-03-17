@@ -14,8 +14,49 @@ import { parseISO } from 'date-fns';
 ```
 Exemplo de uso: https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/AppointmentController.js#L78
 
+### format(date, message):
+Formata uma data para ser adicionada em uma string. A string deve ser passada dentro de àspas duplas (""), para adicionar caracteres que não tem relação com a função, deve ser colocado dentro de àspas simples (''). 
+Legenda:
+dd = dígitos dos dias;
+MMMM = mês;
+H = Hora;
+mm = Minutos;
+
+Importação: 
+```javascript
+import { format } from 'date-fns';
+```
+Exemplo de uso:
+```javascript
+const formattedDate = format(
+  hourStart,
+  "'dia' dd ' de' MMMM', às' H:mm'h'" 
+);
+``` 
+Outro exemplo de uso:
+https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/AppointmentController.js#L111
+
+### locale/pt:
+Configura uma data para o pt-br. No exemplo abaixo o mês vai sair em português.
+
+Importação: 
+```javascript
+import pt from 'date-fns/locale/pt';
+```
+Exemplo de uso:
+```javascript
+const formattedDate = format(
+  hourStart,
+  "'dia' dd ' de' MMMM', às' H:mm'h'",
+  { locale: pt }
+);
+``` 
+Outro exemplo de uso:
+https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/AppointmentController.js#L114
+
 ### startOfHour(date):
-Pega apenas o inicio de uma hora passada e não os minutos e segundos
+Pega apenas o inicio de uma hora passada e não os minutos e segundos.
+
 Importação:
 ```javascript
 import { startOfHour } from 'date-fns';
