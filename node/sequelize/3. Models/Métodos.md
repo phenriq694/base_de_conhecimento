@@ -207,6 +207,46 @@ class ProviderController {
 export default new ProviderController();
 ```
 
+#### order:
+Ordena como os elementros serão retornados de acordo com o atributo passado.
+```javascript
+import User from '../models/User';
+
+class ProviderController {
+  async index(req, res) {
+    const providers = await User.fundAll({
+      where: { provider: true }, 
+      order: ['name'],
+    });
+
+    return res.json(providers)
+  }
+}
+
+export default new ProviderController();
+```
+
+### paginação com 'limit' e 'offset':
+Com essas duas condições podemos definir quando dados serão retornados por vez. 
+```javascript
+import User from '../models/User';
+
+class ProviderController {
+  async index(req, res) {
+    const { page = 1 } = req.query;
+    
+    const providers = await User.fundAll({
+      where: { provider: true }, 
+      limit: 20, // Define o limite de dados retornados por vez
+      offset: (page - 1) * 20, // Cálculo para saber quatos elementos serão pulados na para exibir os outros na próxima página. 
+    });
+
+    return res.json(providers)
+  }
+}
+
+export default new ProviderController();
+```
 ## Fontes: 
 - Rocketseat GoStack - Módulo Iniciando back-end do GoBarber - Cadastro de usuários. 
 - Rocketseat GoStack - Módulo Continuando API do GoBarber - Listagem de prestadores de serviço.
