@@ -79,6 +79,15 @@ import { endOfDay } from 'date-fns';
 ```
 Exemplo de uso: https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/ScheduleController.js#L26
 
+### subHours(date, subValue):
+Subtrai horas de uma data. 
+
+Importação:
+```javascript
+import { subHours } from 'date-fns';
+```
+Exemplo de uso: https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/AppointmentController.js#L147
+
 ### isBefore(startHour, currentHour):
 Verifica se uma data vem antes de outra. 
 Importação:
