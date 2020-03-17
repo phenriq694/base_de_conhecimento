@@ -7,4 +7,4 @@ docker run --name nome_do_banco -e POSTGRES_PASSWORD=senha -p 5432:5432 -d postg
 ```
 
 ## Fontes: 
-### Rockseat GoStack - Módulo Iniciando back-end do GoBarber - Configurando Docker. 
+- Rocketseat GoStack - Módulo Iniciando back-end do GoBarber - Configurando Docker. 
