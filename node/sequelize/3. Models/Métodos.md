@@ -226,7 +226,7 @@ class ProviderController {
 export default new ProviderController();
 ```
 
-### paginação com 'limit' e 'offset':
+#### paginação com 'limit' e 'offset':
 Com essas duas condições podemos definir quando dados serão retornados por vez. 
 ```javascript
 import User from '../models/User';
@@ -234,7 +234,7 @@ import User from '../models/User';
 class ProviderController {
   async index(req, res) {
     const { page = 1 } = req.query;
-    
+
     const providers = await User.fundAll({
       where: { provider: true }, 
       limit: 20, // Define o limite de dados retornados por vez
@@ -247,6 +247,16 @@ class ProviderController {
 
 export default new ProviderController();
 ```
+
+#### Op.between
+Operador de comparação entre dois valores e que retorna um valor que está entre eles. 
+Importação: 
+```javascript
+import { Op } from 'sequelize';
+```
+Exemplo de uso: https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/ScheduleController.js#L26
+
 ## Fontes: 
 - Rocketseat GoStack - Módulo Iniciando back-end do GoBarber - Cadastro de usuários. 
 - Rocketseat GoStack - Módulo Continuando API do GoBarber - Listagem de prestadores de serviço.
+- Rocketseat GoStack - Módulo Continuando API do GoBarber - Aplicando paginação.
