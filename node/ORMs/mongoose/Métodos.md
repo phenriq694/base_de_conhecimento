@@ -37,5 +37,82 @@ class UserController {
 export default new UserController();
 ```
 
+### find:
+Utilizado para localizar todos os elementos de um schema. Pode ser passado um atributo para filtrar o resultado. 
+```javascript
+import Notifications from '../schemas/Notification';
+
+class NotificationController {
+  async index(req, res) {
+    const notifications = await Notification.find({
+      user: req.params.id, 
+    })
+
+    return res.json(notifications);
+  }
+}
+
+export default new Notification;
+```
+
+### findByIdAndUpdate:
+Utilizado para localizar um elemento usando a chave primária e já atualizar ele com um valor.
+```javascript
+import Notifications from '../schemas/Notification';
+
+class NotificationController {
+  async update(req, res) {
+    const notifications = await Notification.findByIdUpdate({
+      req.params.id, 
+      { read: true }, // Alteração de um atributo após a localização do elemento.
+      { new : true }, // Retorna o elmento já alterado. 
+    })
+
+    return res.json(notifications);
+  }
+}
+
+export default new Notification;
+```
+
+### Conditions:
+#### sort(attribute):
+Ordena a pesquisa em relação ao atributo passado como parâmetro:
+```javascript
+import Notifications from '../schemas/Notification';
+
+class NotificationController {
+  async index(req, res) {
+    const notifications = await Notification.find({
+      user: req.params.id, 
+    }).sort('createdAt');
+
+    return res.json(notifications);
+  }
+}
+
+export default new Notification;
+```
+
+#### limit(number):
+Limita o número de elementos retornados na pesquisa. 
+```javascript
+import Notifications from '../schemas/Notification';
+
+class NotificationController {
+  async index(req, res) {
+    const notifications = await Notification.find({
+      user: req.params.id, 
+    }).sort('createdAt').limit(20);
+
+    return res.json(notifications);
+  }
+}
+
+export default new Notification;
+```
+
 ## Fontes: 
 - Rocketseat GoStack - Módulo Continuando API do GoBarber - Notificando novos agendamentos. 
+- Rocketseat GoStack - Módulo Continuando API do GoBarber - Listando notificações do usuário. 
+- Rocketseat GoStack - Módulo Continuando API do GoBarber - Mostrando notificações como lidas. 
