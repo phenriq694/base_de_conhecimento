@@ -88,11 +88,43 @@ import { subHours } from 'date-fns';
 ```
 Exemplo de uso: https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/AppointmentController.js#L147
 
+### setSeconds(date, secondsValue):
+Altera o valor dos segundos de uma data para outro informado. 
+Importação:
+```javascript
+import { setSeconds } from 'date-fns';
+```
+Exemplo de uso: https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/AvailableController.js#L50
+
+### setMinutes(date, minutesValue):
+Altera o valor dos minutos de uma data para outro informado. 
+Importação:
+```javascript
+import { setMinutes } from 'date-fns';
+```
+Exemplo de uso: https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/AvailableController.js#L51
+
+### setHours(date, hoursValue):
+Altera o valor da hora de uma data para outro informado. 
+Importação:
+```javascript
+import { setHours } from 'date-fns';
+```
+Exemplo de uso: https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/AvailableController.js#L51
+
 ### isBefore(startHour, currentHour):
 Verifica se uma data vem antes de outra. 
 Importação:
 ```javascript
 import { isBefore } from 'date-fns';
+```
+Exemplo de uso: https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/AppointmentController.js#L80
+
+### isAfter(startHour, currentHour):
+Verifica se uma data acontece depois de outra. 
+Importação:
+```javascript
+import { isAfter } from 'date-fns';
 ```
 Exemplo de uso: https://github.com/phenriq694/GoStack_Modulos/blob/f4968edbb4c54538dacf47bb71159e311a9b52ec/modulo03/gobarber/src/app/controllers/AppointmentController.js#L80
 
