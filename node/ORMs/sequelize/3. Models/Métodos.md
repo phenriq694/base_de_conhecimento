@@ -61,12 +61,32 @@ class UserController {
 export default new UserController();
 ```
 
+### save:
+Salva um elemento que sofreu alterações de valores no banco. 
+```javascript
+import Event from '../models/Events';
+
+class EventController {
+  async delete(req, res) {
+    const event = await Event.findByPk(req.params.id);
+
+    event.canceled_at = new Date();
+
+    await event.save();
+
+    return res.json(event)
+  }
+}
+
+export default new DeliverymanController();
+```
+
 ### destroy:
 Utilizado para excluir uma elemento de uma tabela. Para isso, é necessário localizar o elemento que será deltado. Utilizado principalmente com o método 'DELETE'. Pode ser utilizado direto no elemento localizado. 
 ```javascript
 import Deliveryman from '../models/Deliveryman';
 
-class Deliverymane {
+class DeliverymanController {
   async delete(req, res) {
     const deliveryman = await Deliveryman.findByPk(req.params.deliveryman_id);
 
