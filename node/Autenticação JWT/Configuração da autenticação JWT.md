@@ -51,7 +51,7 @@ export default User;
 4. Criar um arquivo de configuração da autenticação em 'src/config/auth.js' e colar o código abaixo:
 ```javascript
 export default {
-  secret: 'HashGeradoNoMD5',
+  secret: process.env.APP_SECRET,
   expiresIn: '7d',
 };
 ```
@@ -101,4 +101,4 @@ routes.post('/sessions', SessionController.store);
 ```
 
 ## Fontes: 
-- Rockseat GoStack - Módulo Iniciando back-end do GoBarber - Autenticação JWT. 
+- Rocketseat GoStack - Módulo Iniciando back-end do GoBarber - Autenticação JWT. 

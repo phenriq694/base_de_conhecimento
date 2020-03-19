@@ -15,3 +15,7 @@ https://www.mongodb.com/download-center/compass
 - Mandril (Mailchimp);
 - Mailtrap (Ambiente de desenvolvimento).
 https://mailtrap.io
+
+## Serviços para monitoramento de erros:
+- Sentry
+https://sentry.io/welcome/
