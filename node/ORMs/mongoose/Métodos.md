@@ -21,7 +21,7 @@ export default new UserController();
 
 Ou passando o valor de cada atributo: 
 ```javascript
-import User from '../models/User'
+import User from '../schemas/User'
 
 class UserController {
   async store(req, res) {
