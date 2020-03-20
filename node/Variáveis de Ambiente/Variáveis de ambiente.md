@@ -39,17 +39,17 @@ SENTRY_DSN=https://ajr234k5çj23k4j2l3j4524j5k23l4j52k3
 ```
 4. Instalar uma biblioteca para carregar esse arquivo na aplicação:
 ```
-yarn dotenv 
+yarn add dotenv 
 ```
 5. Importar essa biblioteca no começo do arquivo 'app.js' da aplicação. 
 ```javascript
 import 'dotenv/config';
 ```
+Caso a aplicação tiver utilizando filas, importar esse arquivo no arquivo principal da fila, exemplo, 'Queue.js'.
 Importar também no arquivo 'src/config/database.js':
 ```javascript
 require('dotenv/config');
 ```
-Caso a aplicação tiver utilizando filas, importar esse arquivo no arquivo principal da fila, exemplo, 'Queue.js'.
 6. Criar um arquivo na raiz do projeto chamado '.env.example' e colar apenas as chaves do arquivo '.env', para demonstrar o que está sendo utilizado como variável de ambiente na aplicação. 
 ## Fontes: 
 - Rocketseat GoStack - Módulo Continuando API do GoBarber - Variáveis ambiente. 
