@@ -7,7 +7,7 @@ yarn add express-handlebars nodemailer-express-handlebars
 
 2. Fazer a importação das bibliotecas instaladas no arquivo 'src/lib/Mail.js':
 ```javascript
-import exphbs from 'express-handlerbars';
+import exphbs from 'express-handlebars';
 import nodemailerhbs from 'nodemailer-express-handlebars';
 ```
 Também é necessário importar a função 'resolve' da biblioteca 'path' do javascript, para lidar com caminho de arquivos:
@@ -15,7 +15,7 @@ Também é necessário importar a função 'resolve' da biblioteca 'path' do jav
 import { resolve } from 'path';
 ```
 
-3. Criar uma pasta chamada 'views' dentro de 'src/app/'. Dentro dessa pasta, criar uma chamada 'emails', e dentro de 'emails' criar mais duas, 'layouts' e 'partials'. Dentro de 'layouts', criar um arquivo chamado 'default.hbs'. Também criar dentro da pasta 'views' um arquivo com um nome adequado para a função dele, como por exemplo 'cancellation.hbs'. 
+3. Criar uma pasta chamada 'views' dentro de 'src/app/'. Dentro dessa pasta, criar uma chamada 'emails', e dentro de 'emails' criar mais duas, 'layouts' e 'partials'. Dentro de 'layouts', criar um arquivo chamado 'default.hbs'. Também criar dentro da pasta 'views/emails/' um arquivo com um nome adequado para a função dele, como por exemplo 'cancellation.hbs'. 
 
 4. Adicionar um método na classe 'Mail', chamado 'configureTamplates()':
 ```javascript
