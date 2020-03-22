@@ -102,7 +102,7 @@ class DeliverymanController {
 
 export default new DeliverymanController();
 ```
-
+## Finders 
 ### findone:
 Utilizado para encontra um único elemento na base de dados.
 Como parâmetro passamos a condição que o elemento precisa ter.
@@ -162,6 +162,65 @@ class UserController {
 
 export default new UserController();
 ```
+
+### findAndCountAll:
+Utilizar para localizar todos os elementos na tabela e contar quantos registros são encontrados. Retorna dois objetos, sendo 'count' o número de registros e 'rows' um array com os registros encontrados.
+```javascript 
+class DeliveryController {
+  async store(req, res) {
+    const schema = Yup.object().shape({
+      start_date: Yup.date().required(),
+    });
+
+    if (!(await schema.isValid(req.body))) {
+      return res.status(400).json({ error: 'Validation fails' });
+    }
+
+    const { deliveryman_id, order_id } = req.params;
+
+    const order = await Order.findByPk(order_id);
+
+    /**
+     * Check withdrwal limit
+     */
+    const { count } = await Order.findAndCountAll({
+      where: {
+        deliveryman_id: req.params.deliveryman_id,
+        start_date: null,
+        signature_id: null,
+      },
+    });
+
+    if (count > 5) {
+      return res.status(400).json({ error: 'Withdrawal limit reached' });
+    }
+
+    /**
+     * Check withdrawal date
+     */
+    const { start_date } = req.body;
+
+    const parsedDate = parseISO(start_date);
+
+    if (
+      isBefore(parsedDate, setHours(startOfHour(new Date()), 8)) ||
+      isAfter(parsedDate, setHours(startOfHour(new Date()), 18))
+    ) {
+      return res.status(400).json({
+        error:
+          'WithdraDrawal is only allowed between 8am and 6pm on the current day',
+      });
+    }
+
+    order.start_date = parsedDate;
+
+    await order.save();
+
+    return res.json(order);
+  }
+}
+```
+
 ## Conditions
 ### Condições para filtrar os resultados das consultas ao banco. 
 
