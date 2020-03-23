@@ -1,19 +1,19 @@
 # TAG Table
 
 ## Abertura e fechamento:
-```
+```html
 <table> </table>
 ```
 
 ## Linha da tabela:
-```
+```html
 <table>
   <tr>Linha</tr>
 </table>
 ```
 
 ## Cabeçalho:
-``` 
+```html
 <table>
   <thead> <!-- Inicializando um cabeçalho na tabela -->
     <tr> <!-- Linha da tabela (table row) -->
@@ -26,7 +26,7 @@
 ``` 
 
 ## Corpo:
-``` 
+```html
 <table>
   <tbody> <!-- Inicializando o corpo da tabela -->
     <tr> <!-- Linha da tabela (table row) -->
@@ -39,7 +39,7 @@
 ``` 
 
 ## Rodapé:
-``` 
+```html 
 <table>
   <tfoot> <!-- Inicializando o rodapé da tabela -->
     <tr> <!-- Linha da tabela (table row) -->
@@ -52,7 +52,7 @@
 
 ## colspan:
 Utiliza para ocupar mais de uma coluna. É passado como um atribudo na tag que queremos aplicar essa configuração:
-```
+```html
 <table>
   <tfoot> <!-- Inicializando o rodapé da tabela -->
     <tr> <!-- Linha da tabela (table row) -->
@@ -65,7 +65,7 @@ Utiliza para ocupar mais de uma coluna. É passado como um atribudo na tag que q
 
 ## rowspan:
 Utiliza para ocupar mais de uma linha. É passado como um atribudo na tag que queremos aplicar essa configuração:
-```
+```html
 <table>
   <tfoot> <!-- Inicializando o rodapé da tabela -->
     <tr> <!-- Linha da tabela (table row) -->
@@ -77,7 +77,7 @@ Utiliza para ocupar mais de uma linha. É passado como um atribudo na tag que qu
 ```
 
 ## Estilização básica para table:
-```
+```html
 <style>
   table {
     border-collapse: collapse;
@@ -103,5 +103,5 @@ Utiliza para ocupar mais de uma linha. É passado como um atribudo na tag que qu
 </style>
 ```
 
-# Fonte:
-## Curso Web Moderno com JavaScript - Seção 11 - HTML - Tabela
+## Fonte:
+- Curso Web Moderno com JavaScript - Seção 11 - HTML - Tabela
