@@ -5,7 +5,8 @@
 yarn add sqlite3
 ```
 
-2. Criar um arquivo dentro da pasta 'src/database/' chamado 'db.sqlite'
+2. Criar um arquivo dentro da pasta 'src/database/' chamado 'db.sqlite';
+
 
 ## Fontes:
 - Semana Omnistack 11 - Criando a base da aplicação.
