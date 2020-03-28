@@ -30,4 +30,4 @@ Rota 'post', passando body, route params e headers:
 https://github.com/phenriq694/Rocketseat_Semana_OmniStack11_beTheHero/blob/master/frontend/src/pages/NewIncident/index.js#L29
 
 ## Fontes:
-- Semana Omnistack 11 - Construindo a interface web.
+- Semana Omnistack 11 - Desenvolvendo o app mobile.
