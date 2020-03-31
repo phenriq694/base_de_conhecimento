@@ -57,7 +57,6 @@ export const Title = styled.h1`
 ```javascript
 export const SubmitButton = styled.button.attrs(props => ({
   type: 'submit',
-  disabled: props.loading,
 }))`
   background: #7159c1;
   border: 0;
@@ -70,6 +69,63 @@ export const SubmitButton = styled.button.attrs(props => ({
   align-items: center;
 `;
 ```
+
+## Estilo condicional
+É possível estilizar um elemento através de testes condicionais.
+```javascript
+export const SubmitButton = styled.button.attrs(props => ({
+  disabled: props.loading,
+}))`
+  background: #7159c1;
+  border: 0;
+  padding: 0 15px;
+  margin-left: 10px;
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+&[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+`;
+```
+
+## Animações CSS condicional
+Importar duas bibliotecas:
+```javascript
+import styled, { keyframes, css } from 'styled-components';
+``` 
+
+Criar uma constante para armazenar a animação:
+```javascript
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`
+```
+
+Dentro da estilização do componente que receberá a animação inserir o código:
+```javascript
+${props => props.loading &&
+  css`
+    svg {
+      animation: ${rotate} 2s linear inifinite
+    }
+  `
+}
+```
+
+Exemplo de uso em:
+https://github.com/phenriq694/GoStack_Modulos/blob/master/modulo05/Primeiro%20Projeto%20com%20ReactJS/src/pages/Main/styles.js#L48
 
 ## Fontes:
 - Rockseat GoStack - Módulo Primeiro projeto com ReactJS - Styled Components.
