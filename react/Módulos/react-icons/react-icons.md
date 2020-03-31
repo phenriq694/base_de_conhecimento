@@ -52,3 +52,4 @@ Uso dentro do JSX:
 
 ## Fontes:
 - Rockseat GoStack - Módulo Primeiro projeto com ReactJS - Estilização da página Main.
+- Rockseat GoStack - Módulo Primeiro projeto com ReactJS - Adicionando repositórios.

@@ -130,3 +130,4 @@ https://github.com/phenriq694/GoStack_Modulos/blob/master/modulo05/Primeiro%20Pr
 ## Fontes:
 - Rockseat GoStack - Módulo Primeiro projeto com ReactJS - Styled Components.
 - Rockseat GoStack - Módulo Primeiro projeto com ReactJS - Estilizando página Main.
+- Rockseat GoStack - Módulo Primeiro projeto com ReactJS - Adicionando repositórios.
