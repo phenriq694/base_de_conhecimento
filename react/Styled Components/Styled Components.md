@@ -41,7 +41,7 @@ export default function Home() {
 ```javascript
 <Title error>Home</Title>
 ``` 
-É possível recuperar ela para esilizar o componente de forma diferente dependendo do valor da propriedade:
+É possível recuperar ela para estilizar o componente de forma diferente dependendo do valor da propriedade:
 ```javascript
 import styled from 'styled-components';
 
@@ -52,6 +52,25 @@ export const Title = styled.h1`
 `
 ```
 
+## Passando atributos para o elemento: 
+É possível passar propriedades de um elementos HTML utilizando o método 'attrs'({ attribute }). No exemplo abaixo, a propriedade type submit é passado pleo styled componentes:
+```javascript
+export const SubmitButton = styled.button.attrs(props => ({
+  type: 'submit',
+  disabled: props.loading,
+}))`
+  background: #7159c1;
+  border: 0;
+  padding: 0 15px;
+  margin-left: 10px;
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+```
 
 ## Fontes:
 - Rockseat GoStack - Módulo Primeiro projeto com ReactJS - Styled Components.
+- Rockseat GoStack - Módulo Primeiro projeto com ReactJS - Estilizando página Main.
