@@ -17,7 +17,7 @@ export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Home} /> {/* Utilizando o 'exact' para não conflitar com as outroas rotas que também começam com o '/' */}
+        <Route path="/" exact component={Home} /> {/* Utilizando o 'exact' para não conflitar com as outras rotas que também começam com o '/' */}
         <Route path ="/aboutus" component={AboutUs} />
       </Switch>
     </BrowserRouter>
