@@ -87,5 +87,12 @@ class TechList extends Coponentes {
 
 export default TechList
 ```
+
+## Tipos de PropTypes:
+- PropTypes.shape = Objetos;
+- PropTypes.string = String;
+- PropTypes.func = Function;
+
 ## Fontes: 
 - Rockseat GoStack - Módulo Introdução ao React - Default Props & PropTypes. 
+- Rockseat GoStack - Módulo Primeiro projeto com ReactJS - Definindo PropTypes.
