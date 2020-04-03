@@ -8,8 +8,8 @@
   React
 </h2>
 
-### O que é React?
-- Biblioteca para construção de interfaces;
+### O que é React Native?
+- Biblioteca para contrusção de interfaces;
 - Utilizado para construção de Single-Page-Applications;
 
 ### React, ReactJS e React Natvie... Tudo igual?
