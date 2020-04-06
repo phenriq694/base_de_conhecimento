@@ -16,5 +16,10 @@ https://github.com/oblador/react-native-vector-icons
 import Icon from 'react-native-vector-icons/MaterialIcons';
 ```
 
+5. Exemplo de utilização dentro do JSX:
+```javascript
+          <Icon name="nomeDoIcone" size={20} color="#fff" />
+```
+
 ## Fonte:
 - Rockseat GoStack - Módulo Prmeiro projeto com React Native - Estilizando formulário. 
