@@ -23,3 +23,7 @@ https://sentry.io/welcome/
 ## Google Chrome Extensions
 - JSON Viewer
 https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=pt-BR
+
+## Requisições HTTP
+- Insomnia
+https://insomnia.rest/download/
