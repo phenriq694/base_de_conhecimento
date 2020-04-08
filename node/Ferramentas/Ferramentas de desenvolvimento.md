@@ -19,3 +19,7 @@ https://mailtrap.io
 ## Serviços para monitoramento de erros:
 - Sentry
 https://sentry.io/welcome/
+
+## Google Chrome Extensions
+- JSON Viewer
+https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=pt-BR
