@@ -10,6 +10,10 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Container, Form, Input, SubmitButton } from './styles';
 
 export default class Main extends Component {
+  static navigationOptions = {
+    title: 'Usuários',
+  };
+
   state = {
     newUser: '',
     users: [],
@@ -43,10 +47,14 @@ export default class Main extends Component {
     );
   }
 }
+```
 
-Main.navigationOptions = {
-  title: 'Usuários',
-};
+## navigationOptions
+Não é possível passar um valor que pode ser acessando atráves de 'this.props' em um método estático. Então quando for necessário fazer isso, é necessário passar uma função e fazer desestruturação para pegar a propriedade desejada. Exemplo:
+```javascript
+  static navigationOptions = ({ navigation }) => ({
+    title: navigation.getParam('user').name,
+  });
 ```
 
 ## Fonte:
