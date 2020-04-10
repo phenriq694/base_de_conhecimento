@@ -34,3 +34,6 @@ Exemplo de como fica o no arquivo:
 ```
 yarn dev
 ``` 
+
+## Fontes: 
+- Rockseat GoStack - Módulo Back-end com Node.js - Configurando Nodemon. 

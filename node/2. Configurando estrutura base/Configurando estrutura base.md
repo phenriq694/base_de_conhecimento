@@ -46,7 +46,9 @@ module.exports = new App().server
 const app = require('./app')
 
 //Passando como parâmetro o número da porta onde o servidor vai ouvir requisições.
-app.listen(3333)
+app.listen(3333, () => {
+  console.log('🦈️ Server On!');
+})
 ```
 
 6. Criar um arquivo dentro de 'src' com o nome de 'routes.js', onde será configurado as rotas da aplicação:
