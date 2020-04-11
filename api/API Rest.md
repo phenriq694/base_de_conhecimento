@@ -38,6 +38,13 @@ POST http://api.com/company/1/users
 }
 ``` 
 
+##  Métodos HTTP 
+- GET: Buscar/listar uma informação do back-end;
+- POST: Criar uma informação no back-end;
+- PUT: Alterar uma informação no back-end;
+- DELETE: Deletar uma informação no back-end;
+
+
 ## HTTP Codes
 - 1xx: Informational
 - 2xx: Success
