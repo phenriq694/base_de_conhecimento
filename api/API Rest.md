@@ -50,6 +50,7 @@ POST http://api.com/company/1/users
 - 2xx: Success
   - 200: Success;
   - 201: Created;
+  - 204: Content;
 - 3xx: Redirection
   - 301: Moved permanently
   - 302: Moved
