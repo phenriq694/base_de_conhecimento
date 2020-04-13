@@ -42,6 +42,15 @@ yarn add react react-dom
 
 7. Configure Webpack: https://github.com/phenriq694/base_de_conhecimento/blob/master/react/1.%20Criando%20um%20projeto/Without%20create-react-app/Configuring%20Webpack.md
 
+8. Create a file called 'index.js' in the root folder and add the following code:
+```javascript
+import React from 'react';
+import { render } from 'react-dom';
+
+import MainComponent from './MainComponent';
+
+render(<MainComponent />, document.getElementById('app'));
+```
 
 ## Sources:
 - Rockseat GoStack - Module Front-end com ReactJS - Configuring Babel. 
