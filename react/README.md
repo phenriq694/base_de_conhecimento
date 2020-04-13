@@ -24,7 +24,7 @@
   - Back-end: Bussines Rule;
   - Front-end: Interface;
 - One API, multiples clients;
-- Declarative  Programming;
+- Declarative Programming;
 
 ### JSX (JavaScript + XML):
 - Write HTML inside Javascript;
@@ -72,6 +72,16 @@ function Button() {
   );
 }
 ```
+
+Babel
+- Convert the react code for the browser to understand. 
+
+Webpack
+- Has several functions, some of which: 
+  - For each type of file (.js, .css, .png) it converts in a different way. For example, using Babel for JavaScript and other loaders for other type of file.  
+  - create the bundle file with all code of the application;
+  - Teaches JavaScritp how to import CSS, images and others.
+
 
 ## Sources: 
 - Rockseat GoStack - Module Introduction to React - React concepts. 
