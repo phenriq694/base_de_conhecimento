@@ -8,14 +8,70 @@
   React
 </h2>
 
-### O que é React?
-- Biblioteca para construção de interfaces;
-- Utilizado para construção de Single-Page-Applications;
+### What is React?
+- Library to create interfaces;
+- Used to build Singe-Page-Applications;
 
-### React, ReactJS e React Natvie... Tudo igual?
-- React: Referente apenas a biblioteca de contrusção de interfaces; 
-- ReactJS: React + React DOM lib. Manipulação de elementos no browser;
-- React Native: React + Elementos nativos. Para desenvolvimento de aplicações mobile. 
+### React, ReactJS and React Native... All the same?
+- React: Referring only to the library to build interfaces; 
+- ReactJS: React + React DOM lib. Manipulation of elements in the browser;
+- React Native: React + native elements. Used to build mobile applications. 
 
-## Fontes: 
-- Rockseat GoStack - Módulo Introdução ao React - Conceitos do React. 
+### Pros:
+- Code organization:
+  - Componization.
+- Responsability division:
+  - Back-end: Bussines Rule;
+  - Front-end: Interface;
+- One API, multiples clients;
+- Declarative  Programming;
+
+### JSX (JavaScript + XML):
+- Write HTML inside Javascript;
+- With React we can create our elements;
+```javascript
+// Before JSX
+function Button() {
+  return React.createElement(
+    'button',
+    { type: button },
+    Reac.createElement(
+      'span',
+      { class: 'icon' }
+    )
+  )
+}
+
+<button type="button">
+  <span class="icon"></span>
+</button>
+
+// With JSX
+function Button() {
+  return (
+    <button type="button">
+      <span class="icon"></span>
+    </button>
+  )
+}
+``` 
+
+### Sintax:
+- Only Javascript.
+```javascript
+import React from 'react';
+
+import './button.css';
+import icon from './button.png';
+
+function Button() {
+  return (
+    <button>
+      <img src={icon} />
+    </button>
+  );
+}
+```
+
+## Sources: 
+- Rockseat GoStack - Module Introduction to React - React concepts. 
