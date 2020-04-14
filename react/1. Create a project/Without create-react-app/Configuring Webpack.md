@@ -90,3 +90,4 @@ yarn webpack-dev-server --mode development
 
 ## Sources:
 - Rockseat GoStack - Module Front-end com ReactJS - Configuring Webpack.
+- Rockseat GoStack - Module Front-end com ReactJS - Importing CSS and images.
