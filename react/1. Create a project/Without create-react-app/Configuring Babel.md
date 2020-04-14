@@ -3,7 +3,7 @@ Convert the react code for the browser to understand.
 
 1. Install the packages: 
 ```bash
-yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli
+yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli @babel/plugin-transform-runtime
 ```
 
 2. Create a file in the root folder called 'babel.config.js'.
@@ -13,7 +13,10 @@ module.exports = {
     '@babel/preset-env',
     '@babel/preset-react'
   ],
-}
+  plugins: [
+    '@babel/plugin-transform-runtime'
+  ]
+};
 ```
 
 3. To convert a file, use the commando below:
