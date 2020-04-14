@@ -28,6 +28,43 @@ module.exports = {
   },
 };
 ```
+Inside of the 'module.rules' is where the loaders are configured. In the example above, the 'babel-loader' has been configured. To configure other, loaders such as 'file-loader' or 'css-loader', it's necessary to add another configuration object within the 'rules' array:
+
+<strong>file-loader</strong>
+
+Install loader package:
+
+```bash
+yarn add file-loader
+```
+Add the configuration within the 'rules' array:
+```javascript
+      {
+        test: /.*\.(gif|png|jpe?g)$/i,
+        use: {
+          loader: 'file-loader',
+        }
+      }
+```
+
+<strong>css-loader and style-loader</strong>
+
+Install loaders package:
+
+```bash
+yarn add style-loader css-loader
+```
+Add the configuration within the 'rules' array:
+```javascript
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'style-loader'},
+          { loader: 'css-loader' },
+        ]
+      },
+```
 
 3. To convert a file, use the commando below:
 ```bash
