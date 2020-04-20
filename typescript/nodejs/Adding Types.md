@@ -17,7 +17,7 @@ interface TechObject {
 }
 
 /** 
- * Creating an interface to define the attribute types from an object and permit desestruct the function params. 
+ * Creating an interface to define the types of attributes of an object and allow destructuring the function params. 
  */
 interface CreateUserData {
   name?: string;
@@ -25,7 +25,7 @@ interface CreateUserData {
   password: string;
   /** 
    * This attribute can have 'string' values or 'TechObject' values.
-   * When the Array will store only values from one type, just add '[]' after the the type.
+   * When the Array stores only values one type, just add '[]' after the the type.
    * Example: techs: string[];
    */
   techs: Array<string | TechObject>;  
@@ -45,3 +45,4 @@ export default function cresteUser({ name, email, password }: CreateUserData) {
 
 ## Sources:
 Rockseat GoStack - Module TypeScript - When use types?
+Rockseat GoStack - Module TypeScript - Typing objects and arrays

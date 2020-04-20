@@ -9,8 +9,8 @@
 
 # What is TypeScript?
 - Add type to JavaScript;
-- Permit to use all new features from JavaScript;
-- Convert all code to older sintaxe for browser;
+- Allows you to use all the new features from JavaScript;
+- Converts all code to older browser syntax;
 
 ## Sources:
 Rockseat GoStack - Module TypeScript - Why TypeScript?

@@ -5,11 +5,11 @@
 yarn add typescript -D
 ```
 2. Create a file with the the extension '.ts'; 
-3. Create the configuration file for typescript:
+3. Create the configuration file to typescript:
 ```bash
 yarn tsc --init
 ```
-4. Uncomment the line follow line in the typescript configuration file, and change the path:
+4. Uncomment the line following line in the typescript configuration file, and change the path:
 ```json
 {
   "outDir": "./dist",                        /* Redirect output structure to the directory. */
