@@ -20,7 +20,7 @@ yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
   }
 }
 ```
-3. Create a config file for Prettier in the root folder called 'prettier.config.js', and add the followign code:
+3. Create a config file for Prettier in the root folder called 'prettier.config.js', and add the following code:
 ```javascript
 module.exports = {
   singleQuote: true,
