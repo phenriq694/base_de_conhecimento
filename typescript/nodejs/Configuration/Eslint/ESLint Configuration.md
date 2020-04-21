@@ -35,6 +35,13 @@ JSON
 ```
 yarn add @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint-plugin-import@^2.20.1 @typescript-eslint/parser@latest
 ```
+4. Create another eslint file called 'eslingignore', and add the following code:
+```ignore
+/*.js
+node_modules
+dist
+```
 
 ## Sources:
-Rockseat GoStack - Module TypeScript - ESLint
+Rockseat GoStack - Module First Project with Node.js - ESLint
+Rockseat GoStack - Module First Project with Node.js - Prettier

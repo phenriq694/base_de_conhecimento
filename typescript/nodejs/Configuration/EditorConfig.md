@@ -17,4 +17,4 @@ insert_final_newline = true
 ```
 
 ## Sources:
-Rockseat GoStack - Module TypeScript - EditorConfig
+Rockseat GoStack - Module First Project with Node.js - EditorConfig
