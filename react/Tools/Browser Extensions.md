@@ -1,4 +1,4 @@
-# Ferramentas de desenvolvimento
+# Browser Extensions
 
 ## Google Chrome Extensions
 - React Dev Tools
