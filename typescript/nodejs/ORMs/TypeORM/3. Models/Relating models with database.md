@@ -36,6 +36,13 @@ export default Appointment;
   "strictPropertyInitialization": false,  /* Enable strict checking of property initialization in classes*/
 }
 ```
-
+6. Add into the file 'src/ormconfig.json' the path of the models folder:
+```json
+{ 
+  "entities": [
+    "./src/models/*ts"
+  ],
+}
+```
 ## Sources:
 Rockseat GoStack - Module Starting GoBarber back-end - Creating Appointment Model
