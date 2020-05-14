@@ -12,9 +12,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify'; 
 
 function App() {
-  <BrowserRouter>
-    <ToastContainer autoClose={3000} /> { /* autoClose: time of the pop-out in seconds */ }
-  </BrowserRouter>
+  return (
+    <BrowserRouter>
+      <Routes />
+      <ToastContainer autoClose={3000} /> { /* autoClose: time of the pop-out in seconds */ }
+    </BrowserRouter>
+  )
 }
 
 export default App;
