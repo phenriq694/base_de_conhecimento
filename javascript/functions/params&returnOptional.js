@@ -18,3 +18,8 @@ console.log(area(2, 3, 4, 5, 6))
 // Output: Value above allowed: 25m2.
 // Output: undefined
 console.log(area(5, 5))
+
+/**
+ * Source:
+ * Coder - Modern Development Cource - Section 4: Javascript: Function - Params and Returns are optinal
+ */
