@@ -27,4 +27,4 @@ catch (err) {
 }
 ```
 ## Sources:
-Rockseat GoStack - Module First Project with Node.js - Handling with errors
+Rockseat GoStack - Module First Project with Node.js - Create Class Error
