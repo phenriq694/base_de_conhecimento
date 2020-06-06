@@ -20,7 +20,7 @@ rmvirtualenv python-project
 deactivate
 ```
 5. To open a new virtual environment, run the following command: 
-`` bash
+```bash
 workon python-project
 ```
 
