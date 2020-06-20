@@ -1,7 +1,7 @@
 # Hooks
 
 ## useState:
-Permit use states inside functions without need to create the component as a class. 
+Allow to use states within functions without need to create the component as a class. 
 ```javascript
 import React, { useState } from 'react';
 
@@ -32,7 +32,7 @@ function App() {
 export default App;
 ```
 ## useEffect
-Used to controll the life cycle of the application.
+Used to control the application lifecycle. 
 ```javascript
 import React, { useState, useEffect } from 'react';
 
@@ -76,7 +76,7 @@ function App() {
 export default App;
 ```
 ## useMemo:
-Used when it's necessary execute an code when a especific information change. 
+Used when it's necessary execute an code snippet only when a especific information is changed. 
 ```javascript
 import React, { useState, useEffect, useMemo } from 'react';
 
@@ -123,7 +123,7 @@ function App() {
 export default App;
 ```
 ## useCallback:
-Returns a function and avoid to reload a function every time that the component is created. Is reloaded only when a dependency is changed. 
+Returns a function and avoids to reloading a function every time the component is created. It's reloaded only when a dependency is changed. 
 ```javascript
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 
