@@ -62,7 +62,7 @@ export default function auth(state = INITIAL_STATE, action) {
 import {useSelector} from 'react-redux'; 
 ```
 8. Declare a const called 'loading' and assign it with 'useSelector' passing the state of the auth module, selecting the 'loading' value:
-```
+```javascript
 const loading = useSelector(state => state.auth.loading);
 ```
 9. Add the 'loading' const to the component that will use it. In the following example, it was used on a button. As long as 'loading' is equal to 'true' (loading...) the content button will change to 'Loading...':
