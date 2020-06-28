@@ -1,25 +1,31 @@
-# Loading para autenticação 
+# Authetication Loading  
 
-No arquivo de reducer da autenticação, ouvir mais duas actions: 
-
-```javascritp
-//Uma para aguardar a requisição. 
+1. In the 'src/store/auth/reducer.js' file, listen for two new actions:
+```javascript
+//Wait the request 
 case '@auth/SIGN_IN_REQUEST': {
   draft.loading = true;
   break;
 }
-//Outra para caso a autenticação falhe
+// In case the request failed
 case '@auth/SIGN_FAILURE': {
   draft.loading = false;
   break;
 }
 ``` 
-Em '@auth/SIGN_IN_REQUEST' nós alteramos o valor de 'loading' para 'true'. Para demonstrar que a requisição está sendo processada. 
-Caso ocorra algum erro na autenticação, a action'@auth/SIGN_FAILURE' é ouvida, e nós 'desligamos' o 'loading' e tratamos o problema, como exibir uma mensagem de erro para o usuário, por exemplo. 
-Caso não ocorra nenhum erro, também temos que alterar o valor de 'loading' para false. 
-
-O código base deve parecer com o abaixo: 
+2. In '@auth/SIGN_IN_REQUEST', the value of 'loading' is changed to 'true'. This will inform the application that the request is being processed;
+3. If there is problem woth the request, the action '@auth/SIGN_FAILURE' will be heard and loading value will be changed to 'false'. The error message will be handled;
+4. If there is no error in the request, the 'loading' value needs to change to 'false'. So, it's necessary to add this feature in the '@auth/SIGN_IN_SUCCESS' action too:
+```javascript
+case '@auth/SIGN_SUCCESS': {
+  draft.token = action.payload.token;
+  draft.signed = true;
+  draft.loading = false;
+  break;
+}
 ```
+5. After these configurations, the code will look like this: 
+```javascript
 import produce from 'immer';
 
 const INITIAL_STATE = {
@@ -50,26 +56,21 @@ export default function auth(state = INITIAL_STATE, action) {
   });
 }
 ```
-
-Caso você não tenha refatorando o código, colocar o 'return' por volta do switch. 
-
-Agora, no arquivo onde está o componente onde o loading precisa estar localizado. Por exemplo 'signin/index.js'. Fazer as seguintes alterações:
-
-Importar o  'useSelector' do 'react-redux'. 
-```
+6. In the component that needs the authetication loading, make the following configurations:
+7. Import the 'useSelection' from 'react-redux':
+```javascript
 import {useSelector} from 'react-redux'; 
 ```
-Definir uma constante 'loading' e atribuir, usando o 'useSelector', e acessar o 'state' da aplicação no reducer 'auth', onde foram adicionados as actions para ouvir a requisiçaõ e/ou a falha na autenticação, e acessar a propriedade 'loading':
+8. Declare a const called 'loading' and assign it with 'useSelector' passing the state of the auth module, selecting the 'loading' value:
 ```
 const loading = useSelector(state => state.auth.loading);
 ```
-Adicionar o 'loading' no component que fará uso dele. No exemplo abaixo, foi utilizado em um 'button'. Enquanto 'loading' for verdadeiro (estiver carregando) o conteúdo 'button' será alterado para 'Carregando...'. 
+9. Add the 'loading' const to the component that will use it. In the following example, it was used on a button. As long as 'loading' is equal to 'true' (loading...) the content button will change to 'Loading...':
+```javascript
+<button type="submit">{loading ? 'Loading...' : 'Access'}</button>
 ```
-<button type="submit">{loading ? 'Carregando...' : 'Acessar'}</button>
-```
-
-O código final do 'signin/index.js' deve ficar assim:
-```
+10. After all these configurations, the component should look like this:
+```javascript
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Input } from '@rocketseat/unform';
@@ -116,13 +117,12 @@ export default function SignIn() {
   );
 }
 ```
-Após isso, nas configurações do saga da autenticação, é necessário colocar um 'try/catch' por volta do código para captura quando ocorrer uma falha. 
-Para isso vamos importar a actiona responsável pelo '@auth/SIGN_FAILURE'
-```
+11. In the saga file of the auth module, it's necesary to add a 'try/catch' around the sing in code to catch any errors that may occur. To do this, import the action that is triggered when an error occurs in a request:
+```javascript
 import { signFailure } from './actions' 
 ```
-E depois o código que queremos testar dentro do 'try':
-```
+12. Then, add the 'try/catch': 
+```javascript
 try {
     const { email, password } = payload;
 
@@ -140,8 +140,8 @@ try {
     yield put(signFailure());
   }
 ```
-O código final do 'aut/saga.js' deve ficar assim:
-```
+13. After this configuration, the saga file will look like this:
+```javascript
 import { takeLatest, call, put, all } from 'redux-saga/effects';
 
 import history from '~/services/history';
@@ -171,6 +171,7 @@ export function* singIn({ payload }) {
 export default all([takeLatest('@auth/SIGN_IN_REQUEST', singIn)]);
 ```
 
-
+## Sources:
+Rockseat GoStack - Module GoBarber Web - Authetication Loading
 
 
