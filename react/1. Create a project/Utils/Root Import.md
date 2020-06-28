@@ -1,0 +1,59 @@
+# Root Import
+
+1. Intall: 
+```
+yarn add customize-cra react-app-rewired  babel-plugin-root-import eslint-import-resolver-babel-plugin-root-import -D
+```
+2. Create a file in the root folder called 'config-overrides.js' and paste the following code:
+```javascript
+const { addBabelPlugin, override } = require('customize-cra');
+
+module.exports = override(
+  addBabelPlugin([
+    'babel-plugin-root-import',
+    {
+      rootPathSuffix: 'src',
+    },
+  ])
+);
+```
+3. Change the scripts commands in the package.json file:
+```json
+{
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+}
+```
+4. To import other files now, use the '~' char to reference the 'src' folder:
+```javascript
+import file from '~/pages/Home';
+```
+5. Add into the 'eslintrc.js' file the following configuration to avoid eslint errors messages:
+```js
+{
+  settings: {
+  "import/resolver": {
+    "babel-plugin-root-import": {
+      rootPathSuffix: "src"
+    },
+  },
+}
+```
+6. Create a file in the root folder called 'jsconfig.json' and add the following settings to allow navigation to the file by pressing the 'CTRL' key and clicking on the file path:
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "~/*": ["*"]
+    }
+  }
+}
+```
+
+## Sources:
+Rockseat GoStack - Module GoBarber Web - Root Import
