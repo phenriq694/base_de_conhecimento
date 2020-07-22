@@ -21,8 +21,7 @@ E2E Tests
 - Code Coverage collects informations of all lines of code that your current tests don't reach;
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/54601930/88130665-8341d100-cbb1-11ea-956c-925eab2f020d.png
-" />
+  <img src="https://user-images.githubusercontent.com/54601930/88130665-8341d100-cbb1-11ea-956c-925eab2f020d.png" />
 </p>
 
 ## Sources:
