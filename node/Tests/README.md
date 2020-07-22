@@ -25,4 +25,4 @@ E2E Tests
 </p>
 
 ## Sources:
-Rockseat GoStack - Module Tests on Node - Testing Concepts
+Rockseat GoStack - Module Node Tests - Testing Concepts
