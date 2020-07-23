@@ -2,6 +2,7 @@
 
 1. Install the following libs:
 ```
+yarn add factory-girl faker -D
 ```
 2. Create a file called 'factories.js' into the '__tests__' folder;
 3. The following example creates random data to the User model:
