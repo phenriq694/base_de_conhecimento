@@ -1,4 +1,4 @@
-# Mock do useSelector
+# useSelector Mock
 
 1. Declare the redux mock;
 2. With the 'mockImplementation', simulate the 'useSelector' behavior;

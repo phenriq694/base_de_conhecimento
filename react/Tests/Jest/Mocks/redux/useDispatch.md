@@ -1,4 +1,4 @@
-# useDispatch
+# useDispatch Mock
 
 ```javascript
 import React from 'react';
