@@ -11,4 +11,4 @@ appcenter login
 ```
 4. In the appcenter website, create an app for Android and another for iOS;
 ## Sources:
-Rockseat GoStack - ReactJS and React Native Deploy - Configunring Appcenter
+Rockseat GoStack - ReactJS and React Native Deploy - Configuring Appcenter
